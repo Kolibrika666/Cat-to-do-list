@@ -57,12 +57,12 @@ main{
 h1{
     font-family: 'Segoe';
     margin: 1%;
-    font-size: 150%;
+    font-size: 200%;
 }
 p{
     font-family: 'Segoe Script';
     font-weight: 700;
-    font-size: 100%;
+    font-size: 120%;
     text-align: left;
 }
 section{
@@ -70,7 +70,7 @@ section{
     display: grid;
 }
 article{
-    background: rgba(200, 181, 113, 0.80);
+    background: rgba(227, 210, 150, 0.8);
     align-self: flex-end;
     padding: 5%;
     display: grid;
@@ -99,4 +99,13 @@ div{
     flex-direction: column;
     gap: 50%;
     max-width: max-content;
+}
+
+.delete__text{
+    text-decoration: line-through ;
+}
+
+.check__text{
+    text-decoration: underline;
+    color: darkgreen;
 }
