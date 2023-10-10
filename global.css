@@ -64,6 +64,7 @@ p{
     font-weight: 700;
     font-size: 120%;
     text-align: left;
+    text-decoration:none;
 }
 section{
     margin: auto;
@@ -92,6 +93,15 @@ button{
     background-repeat: no-repeat;
     width: 25px;
     height: 25px;
+}
+
+.create__button{
+    border: 1px solid black;
+    border-radius: 10px;
+    background: rgba(227, 210, 150, 0.8);
+    font-size: 20px;
+    padding: 3px;
+    font-family: 'Segoe Script';
 }
 
 div{
