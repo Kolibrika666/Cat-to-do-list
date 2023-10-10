@@ -6,56 +6,97 @@
     font-family: 'Segoe Script';
     src: url(fonts/segoescript.ttf);
 }
+@media (orientation: portrait) {
+    section {
+        background-image: url("img/background_mobil.png");
+        background-repeat: repeat;
+        width: 100vw;
+        height: 500vw;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(9, 100vw);
+        background-size: cover;
 
+    }
+
+    article{
+        height: 40%;
+    }
+}
+
+@media (orientation: landscape) {
+    section{
+        background-image: url("img/background_big.jpg");
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
+        width: 90vh;
+        height: 90vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+        column-gap: 3% ;
+    }
+    article{
+        height: 40%;
+    }
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: content-box;
 }
-
 body{
 display: flex;
 justify-items: center;
-align-items: center;
-}
 
+}
 main{
-    background-color: rgb(132, 58, 58); 
     width: 100vw;
-    height: 100vh;
     text-align: center;
+    align-items: center;
 }
 h1{
     font-family: 'Segoe';
     margin: 1%;
+    font-size: 150%;
 }
 p{
     font-family: 'Segoe Script';
     font-weight: 700;
+    font-size: 100%;
+    text-align: left;
 }
 section{
-    background-image: url("img/background_big.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top center;
-    width: 90vh;
-    height: 90vh;
-
     margin: auto;
-
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr ;
-    column-gap: 3% ;
 }
-
 article{
-background: rgba(200, 181, 113, 0.80);
-height: 40%;
-align-self: flex-end;
-padding: 5%;
+    background: rgba(200, 181, 113, 0.80);
+    align-self: flex-end;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr max-content;
 }
-
 button{
     border: none;
+    background: transparent;
+}
+.delete{
+    background-image: url(img/delete.png);
+}
+.check {
+    background-image: url(img/check.png);
+}
+
+.check, .delete{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    gap: 50%;
+    max-width: max-content;
 }
