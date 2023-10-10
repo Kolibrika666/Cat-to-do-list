@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Segoe';
+    src: url(fonts/Segoe\ UI.ttf);
+}
+@font-face {
+    font-family: 'Segoe Script';
+    src: url(fonts/segoescript.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body{
+display: flex;
+justify-items: center;
+align-items: center;
+}
+
+main{
+    background-color: rgb(132, 58, 58); 
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+h1{
+    font-family: 'Segoe';
+    margin: 1%;
+}
+p{
+    font-family: 'Segoe Script';
+    font-weight: 700;
+}
+section{
+    background-image: url("img/background_big.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    width: 90vh;
+    height: 90vh;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    column-gap: 3% ;
+}
+
+article{
+background: rgba(200, 181, 113, 0.80);
+height: 40%;
+align-self: flex-end;
+padding: 5%;
+}
+
+button{
+    border: none;
+}
