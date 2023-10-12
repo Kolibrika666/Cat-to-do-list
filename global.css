@@ -71,6 +71,7 @@ p{
     font-size: 120%;
     text-align: left;
     text-decoration:none;
+    grid-row: 1 / 3;
 }
 section{
     margin: auto;
@@ -82,8 +83,10 @@ article{
     padding: 5%;
     display: grid;
     grid-template-columns: 1fr max-content;
+    grid-template-rows: 1fr max-content;
     height: 40%;
     transition: 1s; 
+    position: relative;
 }
 article:hover {
     transform: scale(1.4); /* Увеличиваем масштаб */
@@ -95,11 +98,13 @@ button{
 .delete{
     background-image: url(img/delete.png);
 }
+
 .check {
     background-image: url(img/check.png);
 }
 
 .check, .delete{
+    position: relative;
     background-size: contain;
     background-repeat: no-repeat;
     width: 25px;
@@ -115,24 +120,8 @@ button{
     font-family: 'Segoe Script';
 }
 
-div{
-    display: flex;
-    flex-direction: column;
-    gap: 50%;
-    max-width: max-content;
-}
+.display_none{
 
-.delete__text{
-    text-decoration: line-through ;
-}
-
-.check__text{
-    text-decoration: underline;
-    color: darkgreen;
-}
-
-.clean__text{
-    text-decoration: none;
-    color: black;
+   display: none;
 }
 
