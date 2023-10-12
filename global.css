@@ -17,11 +17,20 @@
         background-size: cover;
 
     }
-
-    article{
-        height: 40%;
-    }
 }
+    @media (orientation: portrait) and (min-width: 400px) {
+        section{
+            background-image: url("img/background_small.jpg");
+            background-size: contain;
+            background-position: top center;
+            background-repeat: no-repeat;
+            width: 90vh;
+            height: 90vh;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr ;
+            column-gap: 3% ;
+        }
+    }
 
 @media (orientation: landscape) {
     section{
@@ -34,9 +43,6 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr ;
         column-gap: 3% ;
-    }
-    article{
-        height: 40%;
     }
 }
 *{
@@ -76,6 +82,7 @@ article{
     padding: 5%;
     display: grid;
     grid-template-columns: 1fr max-content;
+    height: 40%;
 }
 button{
     border: none;
@@ -118,4 +125,9 @@ div{
 .check__text{
     text-decoration: underline;
     color: darkgreen;
+}
+
+.clean__text{
+    text-decoration: none;
+    color: black;
 }

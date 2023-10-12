@@ -2,24 +2,22 @@
 const parent = document.getElementById('parent');
 const elem = parent.querySelector('article');
 const createBtn = document.getElementById('create');
-const deleteBtn = document.querySelector('delete');
-const checkBtn = document.querySelector('check');
+const deleteBtn = document.getElementById('del');
+const checkBtn = document.getElementById('ch');
+
 
 function CreateElement () {
-        let userMessage = prompt('Введите ваше дело')
+            userMessage = prompt('Введите ваше дело')
             let clone = elem.cloneNode(true);
+            clone.className = "clean__text";
             clone.children[0].textContent = userMessage
             parent.appendChild(clone);
 }
 
-// function deleteElement () {
-
-// }
-
-// function checkElement () {
-
-// }
-
 createBtn.onclick = CreateElement;
-// deleteBtn.onclick = deleteElement;
-// checkBtn.onclick = checkElement;
+deleteBtn.onclick = function() { 
+    elem.className = "delete__text";
+}
+checkBtn.onclick = function() { 
+    elem.className = "check__text";
+}
